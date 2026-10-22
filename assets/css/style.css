@@ -178,7 +178,7 @@ p { margin: 0; }
 .menu__foot { margin-top: 28px; display: grid; gap: 6px; font-family: var(--f-mono); font-size: .8125rem; letter-spacing: .04em; }
 
 /* ---------- feuille de transition de page ---------- */
-.sheet { position: fixed; inset: 0; z-index: 150; background: var(--paper-2); display: none; place-items: center; pointer-events: none; }
+.sheet { position: fixed; inset: 0; z-index: 150; background: var(--paper-2) url('../img/texture-papier.webp') 0 0 / 640px; display: none; place-items: center; pointer-events: none; }
 html.js .sheet { display: grid; }
 html.js .sheet.is-gone { visibility: hidden; }
 html.js .sheet { animation: sheetSafe .01s linear 3.2s forwards; }
@@ -339,7 +339,7 @@ html.has-cursor .cursor { display: block; }
 .rub__body { display: grid; gap: 14px; align-content: start; min-width: 0; }
 .rub__body .prose { font-size: 1.0625rem; }
 .rub__lead { font-style: italic; font-size: 1.25rem; line-height: 1.4; }
-.rub__demo { position: relative; min-height: 300px; background: var(--paper-2); padding: 18px; display: grid; align-content: space-between; gap: 14px; min-width: 0; overflow: hidden; }
+.rub__demo { position: relative; min-height: 300px; background: var(--paper-2) url('../img/texture-papier.webp') 0 0 / 520px; padding: 18px; display: grid; align-content: space-between; gap: 14px; min-width: 0; overflow: hidden; }
 .rub__demo .illus { justify-self: start; }
 .sommaire__bar { height: 3px; background: var(--rule-soft); position: relative; margin-top: 18px; }
 .sommaire__bar span { position: absolute; inset: 0; background: var(--tomato); transform-origin: left; transform: scaleX(0); }
@@ -432,6 +432,9 @@ html.no-anim .redpen__txt { --strike: 100%; }
 .revue__item .bars { display: grid; gap: 5px; }
 .revue__item .bars i { display: block; height: 6px; background: var(--ink); opacity: .2; border-radius: 3px; }
 .stage__tag { position: absolute; left: 16px; bottom: 16px; z-index: 4; }
+.stage__chips { position: absolute; left: 16px; right: 16px; bottom: 16px; z-index: 4; list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.stage__chips li { background: var(--ink); color: var(--paper); font-family: var(--f-mono); font-size: .6875rem; letter-spacing: .1em; text-transform: uppercase; padding: 5px 9px; }
+.stage__chips li:nth-child(3n+1) { background: var(--tomato); }
 .stage__media { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; text-align: center; }
 .stage__media li { font-family: var(--f-display); font-size: clamp(1.6rem, 3vw, 2.6rem); line-height: 1.05; text-transform: uppercase; }
 .stage__media li:nth-child(odd) { color: var(--sage); }
@@ -456,7 +459,7 @@ html.no-anim .redpen__txt { --strike: 100%; }
 
 /* ============ LES COUPURES ============ */
 .board { display: grid; gap: 30px 26px; grid-template-columns: minmax(0, 1fr); padding-top: 10px; }
-.clip { position: relative; background: var(--paper); padding: 14px 14px 18px; box-shadow: 0 1px 0 var(--rule-soft), 0 22px 40px -28px rgba(20,48,28,.55); transform: rotate(var(--rot, 0deg)); transform-style: preserve-3d; display: grid; gap: 10px; align-content: start; text-decoration: none; min-width: 0; }
+.clip { position: relative; background: #EFE6D6 url('../img/texture-papier.webp') 0 0 / 520px; padding: 14px 14px 18px; box-shadow: 0 1px 0 var(--rule-soft), 0 22px 40px -28px rgba(20,48,28,.55); transform: rotate(var(--rot, 0deg)); transform-style: preserve-3d; display: grid; gap: 10px; align-content: start; text-decoration: none; min-width: 0; }
 .clip::before { content: ""; position: absolute; inset: 0; background-image: var(--grain); opacity: .12; mix-blend-mode: multiply; pointer-events: none; }
 .clip__tape { position: absolute; top: -12px; left: 50%; width: 92px; height: 26px; margin-left: -46px; background: rgba(183,191,126,.78); transform: rotate(calc(var(--rot, 0deg) * -2 + 3deg)); z-index: 3; box-shadow: 0 1px 2px rgba(0,0,0,.08); }
 .clip__img { aspect-ratio: 4 / 3; max-width: 100%; }
@@ -610,6 +613,7 @@ html.no-anim .redpen__txt { --strike: 100%; }
 .done .stamp { position: relative; width: 150px; transform: rotate(-8deg); }
 .done h3 { font-family: var(--f-display); font-size: 2.2rem; text-transform: uppercase; line-height: 1; }
 @media (min-width: 1000px) {
+  .contact__img { aspect-ratio: 16 / 9; }
   .contact__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 72px; align-items: start; }
 }
 
