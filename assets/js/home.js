@@ -109,6 +109,8 @@
     var loop = gsap.to(track, { xPercent: -50, ease: 'none', duration: 46, repeat: -1 });
     track.addEventListener('mouseenter', function () { gsap.to(loop, { timeScale: 0.15, duration: 0.5 }); });
     track.addEventListener('mouseleave', function () { gsap.to(loop, { timeScale: 1, duration: 0.6 }); });
+    track.addEventListener('focusin', function () { gsap.to(loop, { timeScale: 0, duration: 0.3 }); });
+    track.addEventListener('focusout', function () { gsap.to(loop, { timeScale: 1, duration: 0.6 }); });
   }
 
   /* ---------- dernières dépêches ---------- */
@@ -170,7 +172,7 @@
       rotation: 360, svgOrigin: '160 160', duration: 5, ease: 'none', repeat: -1,
       onUpdate: function () {
         var r = (gsap.getProperty(sweep, 'rotation') % 360 + 360) % 360;
-        nodes.forEach(function (n) { var d = (r - n.a + 360) % 360; n.el.classList.toggle('is-on', d < 70); });
+        nodes.forEach(function (n) { var on = ((r - n.a + 360) % 360) < 70; if (on !== n.on) { n.on = on; n.el.classList.toggle('is-on', on); } });
       }
     });
     ScrollTrigger.create({ trigger: root, containerAnimation: CDF.horizTween || undefined, start: CDF.horizTween ? 'left right' : 'top bottom', end: CDF.horizTween ? 'right left' : 'bottom top', onToggle: function (s) { s.isActive ? spin.play() : spin.pause(); } });
@@ -195,9 +197,11 @@
     var qs_ = ['Racontez-nous l’histoire de votre maison.', 'Pourquoi ce produit plutôt qu’un autre ?', 'Qu’est-ce qui rend votre cuisine différente ?', 'Que voulez-vous que le public retienne ?'];
     var qi = 0;
     root.addEventListener('pointermove', function (e) { var d = Math.hypot(e.clientX - lastX, e.clientY - lastY); lastX = e.clientX; lastY = e.clientY; energy = Math.min(1, energy + d / 260); });
+    var odd = false;
     function draw() {
       if (!active) return;
-      t += 0.05; energy = Math.max(0.32, energy * 0.965);
+      odd = !odd; if (odd) return; // 30 images par seconde suffisent pour l'onde
+      t += 0.1; energy = Math.max(0.32, energy * 0.93);
       var w = canvas.width, h = canvas.height, n = 56, bw = w / n;
       ctx.clearRect(0, 0, w, h);
       for (var i = 0; i < n; i++) {
@@ -234,7 +238,8 @@
 
   function sommaire() {
     var vp = qs('[data-sommaire]'); if (!vp) return;
-    var track = qs('.sommaire__track', vp), bar = qs('.sommaire__bar span');
+    var track = qs('.sommaire__track', vp), bar = qs('[data-rub-bar]'), numEl = qs('[data-rub-n]'), nextEl = qs('[data-rub-next]');
+    var titles = qsa('.rub h3', vp).map(function (h) { return h.textContent.split('&')[0].split(' & ')[0].trim(); });
     var rubs = qsa('.rub', vp);
     var mm = window.matchMedia('(min-width: 1000px)');
     if (ANIM && mm.matches) {
@@ -244,7 +249,11 @@
         x: function () { return -dist(); }, ease: 'none',
         scrollTrigger: {
           trigger: vp, start: 'top top', end: function () { return '+=' + dist(); }, pin: true, scrub: 0.8, invalidateOnRefresh: true, anticipatePin: 1,
-          onUpdate: function (s) { gsap.set(bar, { scaleX: s.progress }); }
+          onUpdate: function (s) {
+            gsap.set(bar, { scaleX: s.progress });
+            var i = Math.min(titles.length - 1, Math.round(s.progress * (titles.length - 1)));
+            if (numEl.textContent !== String(i + 1)) { numEl.textContent = i + 1; nextEl.textContent = titles[i]; }
+          }
         }
       });
     }
@@ -351,6 +360,8 @@
     var prev = qs('[data-prev]', f), next = qs('[data-next]', f), send = qs('[data-send]', f);
     var done = qs('[data-done]'), recap = qs('[data-recap]'), again = qs('[data-again]');
     var cur = 1;
+    qsa('.field', f).forEach(function (fd, k) { var inp = qs('input, textarea', fd), er = qs('.err', fd); if (inp && er) { er.id = er.id || 'err-' + (inp.id || k); inp.setAttribute('aria-describedby', er.id); } });
+    qs('.chips', f).setAttribute('aria-describedby', 'err-motif');
     var fileIn = qs('#fichier', f), fileName = qs('[data-filename]', f);
     fileIn.addEventListener('change', function () { fileName.textContent = fileIn.files && fileIn.files[0] ? fileIn.files[0].name + ' (reste sur votre appareil)' : 'Aucun fichier'; });
 

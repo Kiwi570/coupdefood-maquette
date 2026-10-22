@@ -3,6 +3,7 @@
    (le plus récent en tête) sur l'accueil, la page projet et la salle de presse.
    Source : salle de presse Prezly de Coup de Food, relevée le 22 octobre 2026. */
 (function () {
+  var WL = {"caroline-1":1365,"caroline-2":1365,"caroline-3":1365,"g-charte-velo":1536,"g-charte-velo-mobile":864,"g-contact-table":1024,"g-contact-table-large":1536,"g-edito-marche":1050,"g-methode-diffusion":1536,"g-methode-premier-cafe":1536,"g-presse-kit":1024,"g-presse-ouverture":1536,"g-presse-ouverture-mobile":864,"g-projet-braises":1536,"g-sommaire-evenements":1024,"g-sommaire-media-training":1024,"g-sommaire-redaction":1024,"g-sommaire-strategie-rp":1024,"g-sommaire-veille":1024,"marque-couverture":1034,"presse-addis":1800,"presse-crab-club":1800,"presse-incorrect-carte":1365,"presse-incorrect-fermentation":1365,"presse-incorrect-film":1800,"presse-incorrect-pizzas":1800,"presse-mylord-jeunes":1800,"presse-mylord-printemps":1800,"presse-mylord-tradition":1365,"presse-on-sen-fish":1800,"presse-rhubarb":900,"presse-rizom":1800,"presse-terrasses":1365}; // largeur réelle des fichiers -l.webp
   var PREZLY = 'https://coup-de-food-e62b1bff.prezly.com/';
 
   var CLIENTS = {
@@ -69,7 +70,7 @@
     POS: { 'presse-mylord-tradition': '50% 20%', 'presse-terrasses': '50% 60%', 'presse-addis': '50% 30%', 'presse-incorrect-fermentation': '50% 42%', 'presse-incorrect-carte': '50% 48%' },
     img: function (name, sizes) {
       var pos = window.CDF.POS[name];
-      return { src: 'assets/img/' + name + '-m.webp', srcset: 'assets/img/' + name + '-m.webp 900w, assets/img/' + name + '-l.webp 1800w', sizes: sizes || '(min-width: 900px) 33vw, 100vw', attr: pos ? ' style="object-position:' + pos + '"' : '' };
+      return { src: 'assets/img/' + name + '-m.webp', srcset: 'assets/img/' + name + '-m.webp 900w, assets/img/' + name + '-l.webp ' + (WL[name] || 1800) + 'w', sizes: sizes || '(min-width: 900px) 33vw, 100vw', attr: pos ? ' style="object-position:' + pos + '"' : '' };
     }
   };
 })();

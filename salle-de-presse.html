@@ -6,10 +6,22 @@
 <title>Salle de presse Coup de Food</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Les communiqués de presse de Coup de Food : restaurants, artisans et producteurs engagés, à Bruxelles et en Wallonie.">
+<meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#F4EFE3">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_BE">
+<meta property="og:site_name" content="Coup de Food">
+<meta property="og:title" content="Salle de presse Coup de Food">
+<meta property="og:description" content="Les communiqués de presse de Coup de Food : restaurants, artisans et producteurs engagés, à Bruxelles et en Wallonie.">
+<meta property="og:url" content="https://coupdefood-maquette.vercel.app/salle-de-presse">
+<meta property="og:image" content="https://coupdefood-maquette.vercel.app/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="assets/fonts/anton.woff" as="font" type="font/woff" crossorigin>
-<link rel="preload" href="assets/fonts/newsreader.woff" as="font" type="font/woff" crossorigin>
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
 <script>!function(d){d.classList.add('js');var r=matchMedia('(prefers-reduced-motion: reduce)').matches,c=null;try{c=localStorage.getItem('cdf-calm')}catch(e){}if(c==='1'||(c===null&&r))d.classList.add('calm')}(document.documentElement)</script>
 </head>
@@ -41,7 +53,7 @@
   </div>
 </header>
 
-<div class="menu" id="menu" hidden>
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
   <div class="wrap">
     <ol>
       <li><a href="index.html#sommaire">Services <small>p. 3</small></a></li>
@@ -82,8 +94,8 @@
   <div class="wrap">
     <figure class="ph wide-photo" data-ht style="aspect-ratio:21/9">
       <picture>
-        <source media="(max-width: 699px)" srcset="assets/img/g-presse-ouverture-mobile-m.webp 900w, assets/img/g-presse-ouverture-mobile-l.webp 1800w" sizes="100vw">
-        <img src="assets/img/g-presse-ouverture-m.webp" srcset="assets/img/g-presse-ouverture-m.webp 900w, assets/img/g-presse-ouverture-l.webp 1800w" sizes="100vw" width="1800" height="771" decoding="async" alt="Une salle de conférence de presse vide, des micros posés sur une longue table">
+        <source media="(max-width: 699px)" srcset="assets/img/g-presse-ouverture-mobile-m.webp 864w, assets/img/g-presse-ouverture-mobile-l.webp 864w" sizes="100vw">
+        <img src="assets/img/g-presse-ouverture-m.webp" srcset="assets/img/g-presse-ouverture-m.webp 900w, assets/img/g-presse-ouverture-l.webp 1536w" sizes="100vw" width="1800" height="771" decoding="async" alt="Une salle de conférence de presse vide, des micros posés sur une longue table">
       </picture>
     </figure>
   </div>
@@ -118,13 +130,13 @@
         </div>
         <div class="box">
           <h3>Kit média</h3>
-          <figure class="ph" data-ht style="aspect-ratio:4/5"><img src="assets/img/g-presse-kit-m.webp" srcset="assets/img/g-presse-kit-m.webp 900w, assets/img/g-presse-kit-l.webp 1800w" sizes="(min-width: 1100px) 22vw, 100vw" width="1024" height="1280" loading="lazy" decoding="async" alt="Un dossier de presse ouvert sur une nappe de lin, avec des photos et une clé USB"></figure>
+          <figure class="ph" data-ht style="aspect-ratio:4/5"><img src="assets/img/g-presse-kit-m.webp" srcset="assets/img/g-presse-kit-m.webp 900w, assets/img/g-presse-kit-l.webp 1024w" sizes="(min-width: 1100px) 22vw, 100vw" width="1024" height="1280" loading="lazy" decoding="async" alt="Un dossier de presse ouvert sur une nappe de lin, avec des photos et une clé USB"></figure>
           <p style="font-size:1rem">Logos, portraits et visuels haute définition de chaque communiqué sont téléchargeables depuis la salle de presse Prezly.</p>
           <div class="kit">
-            <figure class="ph kit__logo" data-ht><img src="assets/img/marque-couverture-m.webp" srcset="assets/img/marque-couverture-m.webp 900w, assets/img/marque-couverture-l.webp 1800w" sizes="(min-width: 1100px) 22vw, 100vw" width="1034" height="748" loading="lazy" decoding="async" alt="Logo Coup de Food, saveurs engagées, sur fond vert"></figure>
-            <figure class="ph" data-ht><img src="assets/img/caroline-1-m.webp" srcset="assets/img/caroline-1-m.webp 900w, assets/img/caroline-1-l.webp 1800w" sizes="120px" width="900" height="1350" loading="lazy" decoding="async" alt="Portrait en noir et blanc de Caroline Corbiau"></figure>
-            <figure class="ph" data-ht><img src="assets/img/caroline-2-m.webp" srcset="assets/img/caroline-2-m.webp 900w, assets/img/caroline-2-l.webp 1800w" sizes="120px" width="900" height="1350" loading="lazy" decoding="async" alt="Caroline Corbiau entre deux troncs d’arbre"></figure>
-            <figure class="ph" data-ht><img src="assets/img/caroline-3-m.webp" srcset="assets/img/caroline-3-m.webp 900w, assets/img/caroline-3-l.webp 1800w" sizes="120px" width="900" height="1350" loading="lazy" decoding="async" alt="Portrait en noir et blanc de Caroline Corbiau"></figure>
+            <figure class="ph kit__logo" data-ht><img src="assets/img/marque-couverture-m.webp" srcset="assets/img/marque-couverture-m.webp 900w, assets/img/marque-couverture-l.webp 1034w" sizes="(min-width: 1100px) 22vw, 100vw" width="1034" height="748" loading="lazy" decoding="async" alt="Logo Coup de Food, saveurs engagées, sur fond vert"></figure>
+            <figure class="ph" data-ht><img src="assets/img/caroline-1-m.webp" srcset="assets/img/caroline-1-m.webp 900w, assets/img/caroline-1-l.webp 1365w" sizes="120px" width="900" height="1350" loading="lazy" decoding="async" alt="Portrait en noir et blanc de Caroline Corbiau"></figure>
+            <figure class="ph" data-ht><img src="assets/img/caroline-2-m.webp" srcset="assets/img/caroline-2-m.webp 900w, assets/img/caroline-2-l.webp 1365w" sizes="120px" width="900" height="1350" loading="lazy" decoding="async" alt="Caroline Corbiau entre deux troncs d’arbre"></figure>
+            <figure class="ph" data-ht><img src="assets/img/caroline-3-m.webp" srcset="assets/img/caroline-3-m.webp 900w, assets/img/caroline-3-l.webp 1365w" sizes="120px" width="900" height="1350" loading="lazy" decoding="async" alt="Portrait en noir et blanc de Caroline Corbiau"></figure>
           </div>
           <a class="link-ink" href="https://coup-de-food-e62b1bff.prezly.com/" target="_blank" rel="noopener">Ouvrir la salle de presse Prezly <span class="arr">↗</span></a>
         </div>
@@ -145,19 +157,19 @@
     <p class="ft__big" data-fit aria-label="Coup de Food."><span class="ft__big-in" data-print>Coup de Food<span class="dot">.</span></span></p>
     <div class="ft__cols">
       <div>
-        <h3>Contact</h3>
+        <h2>Contact</h2>
         <p>Caroline Corbiau<br>Coup de Food<br><span class="sel">caroline@agencecoupdefood.be</span><br><span class="sel">+32 (0) 478/74.29.72</span><br>TVA BE0544.648.466<br>63 avenue de Beersel, 1180 Bruxelles</p>
       </div>
       <div>
-        <h3>Pages</h3>
+        <h2>Pages</h2>
         <ul><li><a href="index.html">Accueil</a></li><li><a href="index.html#sommaire">Services</a></li><li><a href="index.html#entretien">À propos</a></li><li><a href="projet-incorrect.html">Projet : Incorrect</a></li><li><a href="salle-de-presse.html">Salle de presse</a></li></ul>
       </div>
       <div>
-        <h3>Suivre</h3>
+        <h2>Suivre</h2>
         <ul><li><a href="https://www.instagram.com/carolinecorbiau/" target="_blank" rel="noopener">Instagram ↗</a></li><li><a href="https://www.facebook.com/p/Coup-de-food-100064906682012/" target="_blank" rel="noopener">Facebook ↗</a></li><li><a href="https://www.linkedin.com/in/carolinecorbiau" target="_blank" rel="noopener">LinkedIn ↗</a></li></ul>
       </div>
       <div>
-        <h3>Mentions</h3>
+        <h2>Mentions</h2>
         <ul><li><a href="confidentialite.html">Politique de confidentialité</a></li><li><a href="conditions.html">Conditions d’utilisation</a></li></ul>
       </div>
     </div>

@@ -3,16 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Coup de Food</title>
+<title>Coup de Food · Relations presse et communication food à Bruxelles</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Coup de Food, agence de relations presse et de communication food à Bruxelles. Caroline Corbiau accompagne les chef·fe·s, artisan·e·s et producteur·ice·s engagé·e·s.">
+<meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#F4EFE3">
-<meta property="og:title" content="Coup de Food · Relations presse & communication food">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_BE">
+<meta property="og:site_name" content="Coup de Food">
+<meta property="og:title" content="Coup de Food · Relations presse et communication food">
 <meta property="og:description" content="Faire parler de votre cuisine comme elle le mérite. Par Caroline Corbiau, Bruxelles.">
-<meta property="og:image" content="assets/img/marque-couverture-l.webp">
+<meta property="og:url" content="https://coupdefood-maquette.vercel.app/">
+<meta property="og:image" content="https://coupdefood-maquette.vercel.app/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Coup de Food, saveurs engagées : relations presse et communication food à Bruxelles">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="assets/fonts/anton.woff" as="font" type="font/woff" crossorigin>
-<link rel="preload" href="assets/fonts/newsreader.woff" as="font" type="font/woff" crossorigin>
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="assets/img/presse-mylord-jeunes-m.webp" imagesrcset="assets/img/presse-mylord-jeunes-m.webp 900w, assets/img/presse-mylord-jeunes-l.webp 1800w" imagesizes="(min-width: 1200px) 42vw, (min-width: 900px) 50vw, 100vw" fetchpriority="high">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Coup de Food","description":"Agence de relations presse et de communication dédiée à la gastronomie durable : chefs, artisans, producteurs et restaurateurs engagés.","url":"https://www.agencecoupdefood.be","email":"caroline@agencecoupdefood.be","telephone":"+32478742972","vatID":"BE0544648466","address":{"@type":"PostalAddress","streetAddress":"63 avenue de Beersel","postalCode":"1180","addressLocality":"Bruxelles","addressCountry":"BE"},"founder":{"@type":"Person","name":"Caroline Corbiau"},"areaServed":"BE","knowsAbout":["Relations presse","Communication food","Media training","Storytelling","Revue de presse"],"sameAs":["https://www.instagram.com/carolinecorbiau/","https://www.linkedin.com/in/carolinecorbiau","https://coup-de-food-e62b1bff.prezly.com/"]}</script>
 <link rel="stylesheet" href="assets/css/style.css">
 <script>!function(d){d.classList.add('js');var r=matchMedia('(prefers-reduced-motion: reduce)').matches,c=null;try{c=localStorage.getItem('cdf-calm')}catch(e){}if(c==='1'||(c===null&&r))d.classList.add('calm')}(document.documentElement)</script>
 </head>
@@ -44,7 +56,7 @@
   </div>
 </header>
 
-<div class="menu" id="menu" hidden>
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
   <div class="wrap">
     <ol>
       <li><a href="index.html#sommaire">Services <small>p. 3</small></a></li>
@@ -113,7 +125,7 @@
           </div>
           <a class="flash" data-flash data-une-in href="salle-de-presse.html">
             <span class="flash__badge">Dernière dépêche</span>
-            <h3>Salle de presse</h3>
+            <p class="flash__t">Salle de presse</p>
             <p>Tous les communiqués</p>
           </a>
         </aside>
@@ -143,7 +155,7 @@
         <div class="edito__figs">
           <div>
             <figure class="ph edito__portrait" data-ht data-cursor="Caroline">
-              <img src="assets/img/caroline-1-m.webp" srcset="assets/img/caroline-1-m.webp 900w, assets/img/caroline-1-l.webp 1800w" sizes="(min-width: 1000px) 30vw, 100vw" width="1800" height="2700" loading="lazy" decoding="async" alt="Portrait en noir et blanc de Caroline Corbiau, souriante, les mains jointes">
+              <img src="assets/img/caroline-1-m.webp" srcset="assets/img/caroline-1-m.webp 900w, assets/img/caroline-1-l.webp 1365w" sizes="(min-width: 1000px) 30vw, 100vw" width="1800" height="2700" loading="lazy" decoding="async" alt="Portrait en noir et blanc de Caroline Corbiau, souriante, les mains jointes">
             </figure>
             <p class="cap"><span><b>Caroline Corbiau</b>, Coup de Food</span><span>Crédit photo à compléter</span></p>
           </div>
@@ -164,18 +176,19 @@
       <div class="sec-head sec-head--split">
         <h2 class="h-sec" id="sommaire-titre" data-print>Cinq services, <em>un même fil :</em> votre histoire.</h2>
         <div>
-          <p class="dek">Des campagnes de presse, des textes, une parole préparée, des événements et une veille : chaque rubrique se commande seule ou s’assemble.</p>
+          <p class="dek">Des campagnes de presse, des textes, une parole préparée, des événements et une veille, au service de votre histoire.</p>
           <p class="sommaire__hint" aria-hidden="true">Faites défiler <span>→</span></p>
         </div>
       </div>
     </div>
 
     <div class="sommaire__viewport" data-sommaire>
+      <div class="sommaire__hud" aria-hidden="true"><span class="sommaire__count">Rubrique <b data-rub-n>1</b> / 5</span><span class="sommaire__line"><i data-rub-bar></i></span><span class="sommaire__next" data-rub-next>Stratégie RP</span></div>
       <div class="sommaire__track">
 
         <article class="rub" id="rub-rp" aria-labelledby="rub-rp-h">
           <figure class="ph rub__img" data-ht="rub">
-            <img src="assets/img/g-sommaire-strategie-rp-m.webp" srcset="assets/img/g-sommaire-strategie-rp-m.webp 900w, assets/img/g-sommaire-strategie-rp-l.webp 1800w" sizes="(min-width: 1000px) 28vw, 100vw" width="1800" height="2250" loading="lazy" decoding="async" alt="Magazines et journaux sur une table de bistrot, un cappuccino et une coupure de presse">
+            <img src="assets/img/g-sommaire-strategie-rp-m.webp" srcset="assets/img/g-sommaire-strategie-rp-m.webp 900w, assets/img/g-sommaire-strategie-rp-l.webp 1024w" sizes="(min-width: 1000px) 28vw, 100vw" width="1800" height="2250" loading="lazy" decoding="async" alt="Magazines et journaux sur une table de bistrot, un cappuccino et une coupure de presse">
           </figure>
           <div class="rub__body">
             <div class="rub__head"><span class="rub__n">1</span><p class="kicker">Rubrique stratégie</p></div>
@@ -205,7 +218,7 @@
 
         <article class="rub" id="rub-redaction" aria-labelledby="rub-redaction-h">
           <figure class="ph rub__img" data-ht="rub">
-            <img src="assets/img/g-sommaire-redaction-m.webp" srcset="assets/img/g-sommaire-redaction-m.webp 900w, assets/img/g-sommaire-redaction-l.webp 1800w" sizes="(min-width: 1000px) 28vw, 100vw" width="1800" height="2250" loading="lazy" decoding="async" alt="Pages dactylographiées couvertes de corrections au stylo rouge, un stylo-plume et du sel">
+            <img src="assets/img/g-sommaire-redaction-m.webp" srcset="assets/img/g-sommaire-redaction-m.webp 900w, assets/img/g-sommaire-redaction-l.webp 1024w" sizes="(min-width: 1000px) 28vw, 100vw" width="1800" height="2250" loading="lazy" decoding="async" alt="Pages dactylographiées couvertes de corrections au stylo rouge, un stylo-plume et du sel">
           </figure>
           <div class="rub__body">
             <div class="rub__head"><span class="rub__n">2</span><p class="kicker">Rubrique écriture</p></div>
@@ -226,7 +239,7 @@
 
         <article class="rub" id="rub-media" aria-labelledby="rub-media-h">
           <figure class="ph rub__img" data-ht="rub">
-            <img src="assets/img/g-sommaire-media-training-m.webp" srcset="assets/img/g-sommaire-media-training-m.webp 900w, assets/img/g-sommaire-media-training-l.webp 1800w" sizes="(min-width: 1000px) 28vw, 100vw" width="1800" height="2250" loading="lazy" decoding="async" alt="Un micro de radio ancien posé sur le passe d’une cuisine de restaurant vide">
+            <img src="assets/img/g-sommaire-media-training-m.webp" srcset="assets/img/g-sommaire-media-training-m.webp 900w, assets/img/g-sommaire-media-training-l.webp 1024w" sizes="(min-width: 1000px) 28vw, 100vw" width="1800" height="2250" loading="lazy" decoding="async" alt="Un micro de radio ancien posé sur le passe d’une cuisine de restaurant vide">
           </figure>
           <div class="rub__body">
             <div class="rub__head"><span class="rub__n">3</span><p class="kicker">Rubrique parole</p></div>
@@ -238,16 +251,16 @@
             <span class="illus">Exemples de questions</span>
             <div class="onair">
               <span class="onair__lamp" aria-hidden="true">On air</span>
-              <canvas width="600" height="180" aria-hidden="true"></canvas>
+              <canvas width="420" height="126" aria-hidden="true"></canvas>
               <p class="onair__q" aria-live="off" data-q>Racontez-nous l’histoire de votre maison.</p>
             </div>
-            <p class="demo-note">Bougez la souris : l’onde suit votre voix imaginaire.</p>
+            <p class="demo-note">Bougez la souris ou glissez le doigt : l’onde suit votre voix imaginaire.</p>
           </div>
         </article>
 
         <article class="rub" id="rub-evenements" aria-labelledby="rub-evenements-h">
           <figure class="ph rub__img" data-ht="rub">
-            <img src="assets/img/g-sommaire-evenements-m.webp" srcset="assets/img/g-sommaire-evenements-m.webp 900w, assets/img/g-sommaire-evenements-l.webp 1800w" sizes="(min-width: 1000px) 28vw, 100vw" width="1800" height="2250" loading="lazy" decoding="async" alt="Une longue table dressée pour un déjeuner de presse, avant l’arrivée des invités">
+            <img src="assets/img/g-sommaire-evenements-m.webp" srcset="assets/img/g-sommaire-evenements-m.webp 900w, assets/img/g-sommaire-evenements-l.webp 1024w" sizes="(min-width: 1000px) 28vw, 100vw" width="1800" height="2250" loading="lazy" decoding="async" alt="Une longue table dressée pour un déjeuner de presse, avant l’arrivée des invités">
           </figure>
           <div class="rub__body">
             <div class="rub__head"><span class="rub__n">4</span><p class="kicker">Rubrique rencontres</p></div>
@@ -273,7 +286,7 @@
 
         <article class="rub" id="rub-veille" aria-labelledby="rub-veille-h">
           <figure class="ph rub__img" data-ht="rub">
-            <img src="assets/img/g-sommaire-veille-m.webp" srcset="assets/img/g-sommaire-veille-m.webp 900w, assets/img/g-sommaire-veille-l.webp 1800w" sizes="(min-width: 1000px) 28vw, 100vw" width="1800" height="2250" loading="lazy" decoding="async" alt="Des mains découpent des coupures de presse avec des ciseaux en laiton">
+            <img src="assets/img/g-sommaire-veille-m.webp" srcset="assets/img/g-sommaire-veille-m.webp 900w, assets/img/g-sommaire-veille-l.webp 1024w" sizes="(min-width: 1000px) 28vw, 100vw" width="1800" height="2250" loading="lazy" decoding="async" alt="Des mains découpent des coupures de presse avec des ciseaux en laiton">
           </figure>
           <div class="rub__body">
             <div class="rub__head"><span class="rub__n">5</span><p class="kicker">Rubrique veille</p></div>
@@ -298,7 +311,6 @@
 
       </div>
     </div>
-    <div class="wrap"><div class="sommaire__bar" aria-hidden="true"><span></span></div></div>
   </section>
 
   <!-- ============ PAGE 4 : LA MÉTHODE ============ -->
@@ -423,10 +435,10 @@
         <div class="entretien__aside">
           <div class="entretien__pics">
             <figure class="ph entretien__portrait" data-ht data-cursor="Caroline">
-              <img src="assets/img/caroline-2-m.webp" srcset="assets/img/caroline-2-m.webp 900w, assets/img/caroline-2-l.webp 1800w" sizes="(min-width: 1000px) 34vw, 100vw" width="1800" height="2700" loading="lazy" decoding="async" alt="Caroline Corbiau assise entre deux troncs d’arbre">
+              <img src="assets/img/caroline-2-m.webp" srcset="assets/img/caroline-2-m.webp 900w, assets/img/caroline-2-l.webp 1365w" sizes="(min-width: 1000px) 34vw, 100vw" width="1800" height="2700" loading="lazy" decoding="async" alt="Caroline Corbiau assise entre deux troncs d’arbre">
             </figure>
             <figure class="ph entretien__small" data-ht>
-              <img src="assets/img/caroline-3-m.webp" srcset="assets/img/caroline-3-m.webp 900w, assets/img/caroline-3-l.webp 1800w" sizes="(min-width: 1000px) 16vw, 46vw" width="900" height="1350" loading="lazy" decoding="async" alt="Portrait en noir et blanc de Caroline Corbiau, le regard levé">
+              <img src="assets/img/caroline-3-m.webp" srcset="assets/img/caroline-3-m.webp 900w, assets/img/caroline-3-l.webp 1365w" sizes="(min-width: 1000px) 16vw, 46vw" width="900" height="1350" loading="lazy" decoding="async" alt="Portrait en noir et blanc de Caroline Corbiau, le regard levé">
             </figure>
           </div>
           <div class="counter" data-counter>
@@ -463,8 +475,8 @@
   <section class="sec charte" id="charte" aria-labelledby="charte-titre" data-charte>
     <figure class="ph charte__bg" data-ht>
       <picture>
-        <source media="(max-width: 899px)" srcset="assets/img/g-charte-velo-mobile-m.webp 900w, assets/img/g-charte-velo-mobile-l.webp 1800w" sizes="100vw">
-        <img src="assets/img/g-charte-velo-m.webp" srcset="assets/img/g-charte-velo-m.webp 900w, assets/img/g-charte-velo-l.webp 1800w" sizes="100vw" width="1800" height="1013" loading="lazy" decoding="async" alt="Un vélo de ville chargé d’un cageot de légumes de saison, contre un mur de briques">
+        <source media="(max-width: 899px)" srcset="assets/img/g-charte-velo-mobile-m.webp 864w, assets/img/g-charte-velo-mobile-l.webp 864w" sizes="100vw">
+        <img src="assets/img/g-charte-velo-m.webp" srcset="assets/img/g-charte-velo-m.webp 900w, assets/img/g-charte-velo-l.webp 1536w" sizes="100vw" width="1800" height="1013" loading="lazy" decoding="async" alt="Un vélo de ville chargé d’un cageot de légumes de saison, contre un mur de briques">
       </picture>
     </figure>
     <div class="wrap charte__inner">
@@ -502,7 +514,7 @@
       <p class="folio"><span>Page 8</span><span>Salle de presse</span></p>
       <div class="sec-head sec-head--split">
         <h2 class="h-sec" id="depeches-titre" data-print>Dernières <em>dépêches.</em></h2>
-        <p class="dek">Vous êtes journaliste, blogueur ou passionné·e de food ? Les derniers communiqués, triés automatiquement.</p>
+        <p class="dek">Vous êtes journaliste, blogueur ou passionné·e de food ? Voici les derniers communiqués de la salle de presse.</p>
       </div>
       <div class="depeches__grid" data-latest></div>
       <p class="depeches__more"><a class="link-ink" href="salle-de-presse.html">Toute la salle de presse <span class="arr">→</span></a></p>
@@ -514,22 +526,9 @@
     <div class="wrap">
       <p class="folio"><span>Page 9</span><span>Contact</span></p>
       <div class="contact__grid">
-        <div class="contact__intro">
+        <div class="contact__head">
           <h2 class="h-sec" id="contact-titre" data-print>Passez à table&nbsp;!</h2>
           <p class="dek">Parlons de votre projet autour d’un café, d’un plat ou d’une belle idée.</p>
-          <figure class="ph contact__img" data-ht>
-            <picture>
-              <source media="(min-width: 1000px)" srcset="assets/img/g-contact-table-large-m.webp 900w, assets/img/g-contact-table-large-l.webp 1536w" sizes="40vw">
-              <img src="assets/img/g-contact-table-m.webp" srcset="assets/img/g-contact-table-m.webp 900w, assets/img/g-contact-table-l.webp 1800w" sizes="100vw" width="1800" height="2250" loading="lazy" decoding="async" alt="Une table de café vue du dessus : deux tasses, un croissant et un carnet">
-            </picture>
-          </figure>
-          <div class="coords">
-            <div class="coord"><div><small>E-mail</small><span>caroline@agencecoupdefood.be</span></div><button class="copy" type="button" data-copy="caroline@agencecoupdefood.be">Copier</button></div>
-            <div class="coord"><div><small>Téléphone</small><span>+32 (0) 478/74.29.72</span></div><button class="copy" type="button" data-copy="+32478742972">Copier</button></div>
-            <div class="coord"><div><small>Adresse</small><span>63 avenue de Beersel, 1180 Bruxelles</span></div><button class="copy" type="button" data-copy="63 avenue de Beersel, 1180 Bruxelles">Copier</button></div>
-          </div>
-          <p class="declic">Un mail, un appel, un déclic.</p>
-          <p class="press-note">Journaliste ? <a class="txt-link" href="salle-de-presse.html">La salle de presse</a> rassemble communiqués, dossiers et visuels.</p>
         </div>
 
         <div class="contact__form">
@@ -550,23 +549,23 @@
                 <label class="chip"><input type="radio" name="motif" id="m8" value="Demande d’interview / shooting / reportage"><span>Interview / shooting / reportage</span></label>
                 <label class="chip"><input type="radio" name="motif" id="m9" value="Autre demande"><span>Autre demande</span></label>
               </div>
-              <p class="field"><span class="err" data-err="motif"></span></p>
+              <p class="field"><span class="err" data-err="motif" id="err-motif" aria-live="polite"></span></p>
             </fieldset>
 
             <fieldset class="fstep" data-fstep="2" hidden>
               <legend>Vous</legend>
               <div class="grid-2">
-                <div class="field"><label for="prenom">Prénom <i>*</i></label><input id="prenom" name="prenom" autocomplete="given-name" required><span class="err"></span></div>
-                <div class="field"><label for="nom">Nom <i>*</i></label><input id="nom" name="nom" autocomplete="family-name" required><span class="err"></span></div>
-                <div class="field"><label for="email">E-mail <i>*</i></label><input id="email" name="email" type="email" autocomplete="email" required><span class="err"></span></div>
-                <div class="field"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel"><span class="err"></span></div>
+                <div class="field"><label for="prenom">Prénom <i>*</i></label><input id="prenom" name="prenom" autocomplete="given-name" required><span class="err" aria-live="polite"></span></div>
+                <div class="field"><label for="nom">Nom <i>*</i></label><input id="nom" name="nom" autocomplete="family-name" required><span class="err" aria-live="polite"></span></div>
+                <div class="field"><label for="email">E-mail <i>*</i></label><input id="email" name="email" type="email" autocomplete="email" required><span class="err" aria-live="polite"></span></div>
+                <div class="field"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel"><span class="err" aria-live="polite"></span></div>
               </div>
-              <div class="field"><label for="entreprise">Nom de l’entreprise</label><input id="entreprise" name="entreprise" autocomplete="organization"><span class="err"></span></div>
+              <div class="field"><label for="entreprise">Nom de l’entreprise</label><input id="entreprise" name="entreprise" autocomplete="organization"><span class="err" aria-live="polite"></span></div>
             </fieldset>
 
             <fieldset class="fstep" data-fstep="3" hidden>
               <legend>Votre message</legend>
-              <div class="field"><label for="message">Message <i>*</i></label><textarea id="message" name="message" required placeholder="Votre projet, votre actualité, vos envies…"></textarea><span class="err"></span></div>
+              <div class="field"><label for="message">Message <i>*</i></label><textarea id="message" name="message" required placeholder="Votre projet, votre actualité, vos envies…"></textarea><span class="err" aria-live="polite"></span></div>
               <div class="file">
                 <input type="file" id="fichier" name="fichier">
                 <label class="btn btn--line btn--small" for="fichier">Joindre un fichier</label>
@@ -592,6 +591,21 @@
             <p><button class="btn btn--line" type="button" data-again>Nouvelle demande</button></p>
           </div>
         </div>
+        <div class="contact__aside">
+          <figure class="ph contact__img" data-ht>
+            <picture>
+              <source media="(min-width: 1000px)" srcset="assets/img/g-contact-table-large-m.webp 900w, assets/img/g-contact-table-large-l.webp 1536w" sizes="40vw">
+              <img src="assets/img/g-contact-table-m.webp" srcset="assets/img/g-contact-table-m.webp 900w, assets/img/g-contact-table-l.webp 1024w" sizes="100vw" width="1800" height="2250" loading="lazy" decoding="async" alt="Une table de café vue du dessus : deux tasses, un croissant et un carnet">
+            </picture>
+          </figure>
+          <div class="coords">
+            <div class="coord"><div><small>E-mail</small><span>caroline@agencecoupdefood.be</span></div><button class="copy" type="button" data-copy="caroline@agencecoupdefood.be">Copier</button></div>
+            <div class="coord"><div><small>Téléphone</small><span>+32 (0) 478/74.29.72</span></div><button class="copy" type="button" data-copy="+32478742972">Copier</button></div>
+            <div class="coord"><div><small>Adresse</small><span>63 avenue de Beersel, 1180 Bruxelles</span></div><button class="copy" type="button" data-copy="63 avenue de Beersel, 1180 Bruxelles">Copier</button></div>
+          </div>
+          <p class="declic">Un mail, un appel, un déclic.</p>
+          <p class="press-note">Journaliste ? <a class="txt-link" href="salle-de-presse.html">La salle de presse</a> rassemble communiqués, dossiers et visuels.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -604,19 +618,19 @@
     <p class="ft__big" data-fit aria-label="Coup de Food."><span class="ft__big-in" data-print>Coup de Food<span class="dot">.</span></span></p>
     <div class="ft__cols">
       <div>
-        <h3>Contact</h3>
+        <h2>Contact</h2>
         <p>Caroline Corbiau<br>Coup de Food<br><span class="sel">caroline@agencecoupdefood.be</span><br><span class="sel">+32 (0) 478/74.29.72</span><br>TVA BE0544.648.466<br>63 avenue de Beersel, 1180 Bruxelles</p>
       </div>
       <div>
-        <h3>Pages</h3>
+        <h2>Pages</h2>
         <ul><li><a href="index.html">Accueil</a></li><li><a href="index.html#sommaire">Services</a></li><li><a href="index.html#entretien">À propos</a></li><li><a href="projet-incorrect.html">Projet : Incorrect</a></li><li><a href="salle-de-presse.html">Salle de presse</a></li></ul>
       </div>
       <div>
-        <h3>Suivre</h3>
+        <h2>Suivre</h2>
         <ul><li><a href="https://www.instagram.com/carolinecorbiau/" target="_blank" rel="noopener">Instagram ↗</a></li><li><a href="https://www.facebook.com/p/Coup-de-food-100064906682012/" target="_blank" rel="noopener">Facebook ↗</a></li><li><a href="https://www.linkedin.com/in/carolinecorbiau" target="_blank" rel="noopener">LinkedIn ↗</a></li></ul>
       </div>
       <div>
-        <h3>Mentions</h3>
+        <h2>Mentions</h2>
         <ul><li><a href="confidentialite.html">Politique de confidentialité</a></li><li><a href="conditions.html">Conditions d’utilisation</a></li></ul>
       </div>
     </div>
