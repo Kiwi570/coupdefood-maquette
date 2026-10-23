@@ -3,16 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Salle de presse Coup de Food</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Les communiqués de presse de Coup de Food : restaurants, artisans et producteurs engagés, à Bruxelles et en Wallonie.">
+<title>Salle de presse · Coup de Food</title>
+<meta name="description" content="Les communiqués de presse de Coup de Food&nbsp;: restaurants, artisans et producteurs engagés, à Bruxelles et en Wallonie.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#F4EFE3">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_BE">
 <meta property="og:site_name" content="Coup de Food">
 <meta property="og:title" content="Salle de presse Coup de Food">
-<meta property="og:description" content="Les communiqués de presse de Coup de Food : restaurants, artisans et producteurs engagés, à Bruxelles et en Wallonie.">
+<meta property="og:description" content="Les communiqués de presse de Coup de Food&nbsp;: restaurants, artisans et producteurs engagés, à Bruxelles et en Wallonie.">
 <meta property="og:url" content="https://coupdefood-maquette.vercel.app/salle-de-presse">
 <meta property="og:image" content="https://coupdefood-maquette.vercel.app/assets/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -53,7 +52,7 @@
   </div>
 </header>
 
-<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+<div class="menu" id="menu" role="dialog" aria-label="Menu" hidden data-lenis-prevent>
   <div class="wrap">
     <ol>
       <li><a href="index.html#sommaire">Services <small>p. 3</small></a></li>
@@ -65,8 +64,8 @@
       <li><a href="index.html#contact">Contact <small>p. 9</small></a></li>
     </ol>
     <div class="menu__foot">
-      <span>caroline@agencecoupdefood.be</span>
-      <span>+32 (0) 478/74.29.72</span>
+      <a href="mailto:caroline@agencecoupdefood.be">caroline@agencecoupdefood.be</a>
+      <a href="tel:+32478742972">+32 (0) 478/74.29.72</a>
     </div>
   </div>
 </div>
@@ -81,7 +80,7 @@
       <p class="folio" style="margin-top:14px"><span>Salle de presse</span><span data-press-count>13 communiqués</span></p>
       <h1 class="page-title" id="presse-titre" data-fit="wide"><span data-print>Salle de presse</span></h1>
       <div class="page-hero__grid" style="margin-top:28px">
-        <p class="dek">Vous êtes journaliste, blogueur ou passionné·e de food ? Cette salle de presse est faite pour vous. Explorez les dernières actus, les projets marquants et les visuels. Contactez-nous pour toute collaboration ou interview.</p>
+        <p class="dek">Vous êtes journaliste, blogueur ou passionné·e de food&nbsp;? Cette salle de presse est faite pour vous. Explorez les dernières actus, les projets marquants et les visuels. Contactez-nous pour toute collaboration ou interview.</p>
         <dl class="factbox">
           <div><dt>Contact presse</dt><dd>Caroline Corbiau</dd></div>
           <div><dt>Dernier communiqué</dt><dd data-last-date>22 octobre 2026</dd></div>
@@ -105,7 +104,7 @@
       <div class="wrap press-tools__row">
         <label class="search"><span class="sr">Rechercher un communiqué</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
-          <input type="search" id="q" placeholder="Rechercher : pizza, terrasse, Mylord…" autocomplete="off">
+          <input type="search" id="q" placeholder="Rechercher&nbsp;: pizza, terrasse, Mylord…" autocomplete="off">
         </label>
         <label class="sr" for="tri">Trier</label>
         <select class="sort" id="tri"><option value="desc">Plus récents d’abord</option><option value="asc">Plus anciens d’abord</option></select>
@@ -117,15 +116,16 @@
       <div>
         <p class="press-count" aria-live="polite" data-result-count></p>
         <div class="plist" data-plist></div>
-        <p class="empty" data-empty hidden>Aucun communiqué ne correspond. Essayez un autre mot, ou revenez à « Tous ».</p>
+        <noscript><p>Les communiqués s’affichent avec JavaScript. Pour les recevoir, écrivez à <a href="mailto:caroline@agencecoupdefood.be">caroline@agencecoupdefood.be</a>.</p></noscript>
+        <p class="empty" data-empty hidden>Aucun communiqué ne correspond. Essayez un autre mot, ou revenez à «&nbsp;Tous&nbsp;».</p>
       </div>
       <aside class="press-side" aria-label="Contact et ressources presse">
         <div class="box">
           <h3>Contact presse</h3>
           <p class="big">Caroline Corbiau</p>
           <div class="coords" style="border-top:0">
-            <div class="coord"><div><small>E-mail</small><span>caroline@agencecoupdefood.be</span></div><button class="copy" type="button" data-copy="caroline@agencecoupdefood.be">Copier</button></div>
-            <div class="coord"><div><small>Téléphone</small><span>+32 (0) 478/74.29.72</span></div><button class="copy" type="button" data-copy="+32478742972">Copier</button></div>
+            <div class="coord"><div><small>E-mail</small><a href="mailto:caroline@agencecoupdefood.be">caroline@agencecoupdefood.be</a></div><button class="copy" type="button" data-copy="caroline@agencecoupdefood.be" aria-label="Copier l’e-mail">Copier</button></div>
+            <div class="coord"><div><small>Téléphone</small><a href="tel:+32478742972">+32 (0) 478/74.29.72</a></div><button class="copy" type="button" data-copy="+32478742972" aria-label="Copier le numéro">Copier</button></div>
           </div>
         </div>
         <div class="box">
@@ -154,15 +154,15 @@
 <!--FOOTER-->
 <footer class="ft on-ink">
   <div class="wrap">
-    <p class="ft__big" data-fit aria-label="Coup de Food."><span class="ft__big-in" data-print>Coup de Food<span class="dot">.</span></span></p>
+    <p class="ft__big" data-fit><span class="ft__big-in" data-print>Coup de Food<span class="dot">.</span></span></p>
     <div class="ft__cols">
       <div>
         <h2>Contact</h2>
-        <p>Caroline Corbiau<br>Coup de Food<br><span class="sel">caroline@agencecoupdefood.be</span><br><span class="sel">+32 (0) 478/74.29.72</span><br>TVA BE0544.648.466<br>63 avenue de Beersel, 1180 Bruxelles</p>
+        <p>Caroline Corbiau<br>Coup de Food<br><a class="sel" href="mailto:caroline@agencecoupdefood.be">caroline@agencecoupdefood.be</a><br><a class="sel" href="tel:+32478742972">+32 (0) 478/74.29.72</a><br>TVA BE0544.648.466<br>63 avenue de Beersel, 1180 Bruxelles</p>
       </div>
       <div>
         <h2>Pages</h2>
-        <ul><li><a href="index.html">Accueil</a></li><li><a href="index.html#sommaire">Services</a></li><li><a href="index.html#entretien">À propos</a></li><li><a href="projet-incorrect.html">Projet : Incorrect</a></li><li><a href="salle-de-presse.html">Salle de presse</a></li></ul>
+        <ul><li><a href="index.html">Accueil</a></li><li><a href="index.html#sommaire">Services</a></li><li><a href="index.html#entretien">À propos</a></li><li><a href="projet-incorrect.html">Projet&nbsp;: Incorrect</a></li><li><a href="salle-de-presse.html">Salle de presse</a></li></ul>
       </div>
       <div>
         <h2>Suivre</h2>

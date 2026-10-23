@@ -64,6 +64,7 @@
     if (!burger || !menu) return;
     burger.setAttribute('aria-expanded', open ? 'true' : 'false');
     menu.hidden = !open;
+    document.documentElement.classList.toggle('menu-ouvert', open);
     if (open) {
       if (lenis) lenis.stop();
       if (ANIM) gsap.fromTo(qsa('li', menu), { yPercent: 60, autoAlpha: 0 }, { yPercent: 0, autoAlpha: 1, stagger: 0.04, duration: 0.5, ease: 'power3.out' });
@@ -125,7 +126,7 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
   // page courante dans la navigation
-  qsa('.hd__nav a').forEach(function (a) { if (a.getAttribute('href') === here) a.setAttribute('aria-current', 'page'); });
+  qsa('.hd__nav a').forEach(function (a) { var h = a.getAttribute('href'); if (!/#/.test(h) && samePage(h)) a.setAttribute('aria-current', 'page'); });
 
   /* ---------- curseur plume et boutons magnétiques ---------- */
   var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
@@ -182,7 +183,8 @@
   /* ---------- ajustement des grands titres à la largeur ---------- */
   function fit() {
     qsa('[data-mast], [data-fit]').forEach(function (box) {
-      var inner = box.firstElementChild; if (!inner) return;
+      // le texte réservé aux lecteurs d'écran (.sr) ne compte pas dans la mesure
+      var inner = [].filter.call(box.children, function (c) { return !c.classList.contains('sr'); })[0]; if (!inner) return;
       box.style.fontSize = '';
       if (box.getAttribute('data-fit') === 'wide' && window.innerWidth < 700) return;
       var fs = parseFloat(getComputedStyle(box).fontSize);
@@ -195,9 +197,18 @@
 
   /* ---------- impression « rotative » des titres ---------- */
   var splits = new WeakMap();
+  CDF.srText = function (el) {
+    var prev = el.previousElementSibling;
+    if (prev && prev.classList.contains('sr') && prev.dataset.srPour === '1') return;
+    var t = document.createElement('span'); t.className = 'sr'; t.dataset.srPour = '1'; t.textContent = el.textContent.replace(/\s+/g, ' ').trim();
+    el.parentNode.insertBefore(t, el);
+  };
   function prepare(el) {
     if (splits.has(el) || !window.SplitText) return null;
-    var s = SplitText.create(el, { type: 'lines,words,chars', mask: 'lines', linesClass: 'pl', charsClass: 'pc-ch' });
+    // aria-label est interdit sur <p> et <span> : texte réservé aux lecteurs d'écran à côté, lettres masquées
+    var titre = /^H[1-6]$/.test(el.tagName) || el.hasAttribute('role');
+    if (!titre) CDF.srText(el);
+    var s = SplitText.create(el, { type: 'lines,words,chars', mask: 'lines', linesClass: 'pl', charsClass: 'pc-ch', aria: titre ? 'auto' : 'hidden' });
     splits.set(el, s);
     return s;
   }
@@ -311,7 +322,9 @@
   // en passant d'une mise en page à l'autre (rotation d'une tablette), on recharge pour reconstruire les animations
   if (ANIM) ['(min-width: 1000px)', '(min-width: 900px)'].forEach(function (q) {
     var mq = window.matchMedia(q);
-    var onChange = function () { clearTimeout(CDF.__rl); CDF.__rl = setTimeout(function () { location.reload(); }, 250); };
+    // on ne recharge pas si un champ a été rempli : la saisie serait perdue
+    var saisie = function () { return [].some.call(document.querySelectorAll('input, textarea, select'), function (f) { return (f.type === 'checkbox' || f.type === 'radio') ? f.checked !== f.defaultChecked : (f.type !== 'hidden' && f.type !== 'file' && f.value !== f.defaultValue) || (f.type === 'file' && f.files && f.files.length); }); };
+    var onChange = function () { clearTimeout(CDF.__rl); CDF.__rl = setTimeout(function () { if (saisie()) { if (window.ScrollTrigger) ScrollTrigger.refresh(); return; } location.reload(); }, 250); };
     if (mq.addEventListener) mq.addEventListener('change', onChange); else if (mq.addListener) mq.addListener(onChange);
   });
   CDF.ready(function () {

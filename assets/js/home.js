@@ -19,7 +19,7 @@
     var rel = CDF.relative(c.date), today = CDF.daysAgo(c.date) === 0;
     el.href = c.url; el.target = '_blank'; el.rel = 'noopener';
     el.innerHTML = '<span class="flash__badge' + (today ? ' is-today' : '') + '">' + (today ? 'Paru aujourd’hui' : 'Dernière dépêche') + '</span>' +
-      '<h3>' + esc(c.title) + '</h3><p>' + esc(CDF.clientNames(c).join(' · ')) + ' · ' + (today ? CDF.fmtLong(c.date) : rel) + ' ↗</p>';
+      '<p class="flash__t">' + esc(c.title) + '</p><p>' + esc(CDF.clientNames(c).join(' · ')) + ' · ' + (today ? CDF.fmtLong(c.date) : rel) + ' ↗</p>';
   }
 
   /* ---------- les coupures (projets) ---------- */
@@ -140,7 +140,9 @@
     var stamp = qs('[data-stamp]');
     if (!ANIM) { CDF.sheetOut(); return; }
     var item = CDF.attachHT(photoFig);
-    var mastSplit = window.SplitText ? SplitText.create(mast, { type: 'chars' }) : null;
+    var mastTitre = /^H[1-6]$/.test(mast.tagName);
+    if (window.SplitText && !mastTitre) CDF.srText(mast);
+    var mastSplit = window.SplitText ? SplitText.create(mast, { type: 'chars', aria: mastTitre ? 'auto' : 'hidden' }) : null;
     var tl = gsap.timeline({ paused: true });
     tl.from(qsa('.une__rules i'), { scaleX: 0, duration: 0.6, ease: 'power3.inOut', stagger: 0.08 }, 0)
       .from(qs('[data-une-meta]'), { autoAlpha: 0, y: -8, duration: 0.4 }, 0.05);
