@@ -48,6 +48,13 @@
 
   var hd = qs('[data-hd]');
   function hdOffset() { return hd ? hd.offsetHeight : 0; }
+  // hauteur réelle de l'en-tête (barre du haut comprise), pour les blocs qui doivent tenir dans l'écran
+  function setEnteteH() { html.style.setProperty('--entete-h', hdOffset() + 'px'); }
+  if (hd) {
+    setEnteteH();
+    if (window.ResizeObserver) new ResizeObserver(setEnteteH).observe(hd);
+    else window.addEventListener('resize', setEnteteH);
+  }
   function scrollToTarget(target) {
     if (!target) return;
     if (lenis) lenis.scrollTo(target, { offset: -hdOffset() + 2, duration: 1.4 });
